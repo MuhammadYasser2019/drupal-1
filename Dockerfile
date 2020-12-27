@@ -15,5 +15,5 @@ RUN /usr/libexec/s2i/assemble
 CMD /usr/libexec/s2i/run
 USER 0 
 RUN chown apache:apache /var/www/html/ -R 
-RUN mkdir /data && chown -R 1001:1001 /data
+RUN mkdir /data && chown -R 1001:1001 /data && chmod 755 /data;
 USER 1001
