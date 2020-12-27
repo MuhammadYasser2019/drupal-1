@@ -14,5 +14,5 @@ RUN /usr/libexec/s2i/assemble
 # Set the default command for the resulting image
 CMD /usr/libexec/s2i/run
 USER 0 
-RUN chown apache:apache /opt/app-root -R 
+RUN chown apache:apache /var/www/html/sites/ -R 
 USER 1001
