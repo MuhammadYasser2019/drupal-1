@@ -13,7 +13,4 @@ RUN /usr/libexec/s2i/assemble
 
 # Set the default command for the resulting image
 CMD /usr/libexec/s2i/run
-USER 0 
-RUN chown apache:apache /var/www/html/ -R 
-RUN mkdir /data && chown -R 1001:1001 /data && chmod 755 /data;
-USER 1001
+RUN mkdir /opt/app-root/data
