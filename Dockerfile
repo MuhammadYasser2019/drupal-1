@@ -8,7 +8,7 @@ USER 1001
 # RUN chown -R 1001:0 /tmp/src
 RUN mkdir /tmp/src
 RUN git clone https://github.com/MuhammadYasser2019/drupal-1.git /tmp/src/drupal
-RUN mv /tmp/src/drupal/* /tmp/src && mv /tmp/src/drupal/.* /tmp/src
+RUN mv /tmp/src/drupal/* /tmp/src/drupal/.htaccess /tmp/src/drupal/.csslintrc /tmp/src/drupal/.editorconfig /tmp/src/drupal/.eslintignore /tmp/src/drupal/.eslintrc.json /tmp/src/drupal/.gitattributes /tmp/src/drupal/.ht.router.php /tmp/src
 RUN ls -l /tmp/src
 
 # Install the dependencies
