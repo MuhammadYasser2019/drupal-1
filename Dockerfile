@@ -4,7 +4,7 @@ FROM registry.access.redhat.com/ubi8/php-73
 # and set permissions so that the container runs without root access
 # USER 0
 ADD . /tmp/src
-RUN chown -R 1001:0 /tmp/src
+# RUN chown -R 1001:0 /tmp/src
 USER 1001
 
 # Install the dependencies
