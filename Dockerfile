@@ -1,6 +1,4 @@
-# FROM registry.access.redhat.com/ubi8/php-73
-FROM image-registry.openshift-image-registry.svc:5000/drupal-5/php-73
-
+FROM registry.access.redhat.com/ubi8/php-73
 # Add application sources to a directory that the assemble script expects them
 # and set permissions so that the container runs without root access
 # USER 0
