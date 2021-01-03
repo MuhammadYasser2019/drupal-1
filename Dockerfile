@@ -5,6 +5,7 @@ FROM registry.access.redhat.com/ubi8/php-73
 # USER 0
 ADD . /tmp/src
 # RUN chown -R 1001:0 /tmp/src
+RUN id
 USER 1001
 
 # Install the dependencies
