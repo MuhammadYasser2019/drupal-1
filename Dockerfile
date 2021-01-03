@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8/php-73:latest
+FROM registry.access.redhat.com/ubi8/php-73:latest-ashraf
 # Add application sources to a directory that the assemble script expects them
 # and set permissions so that the container runs without root access
 # USER 0
