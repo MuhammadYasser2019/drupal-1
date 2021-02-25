@@ -7,7 +7,7 @@ FROM registry.access.redhat.com/ubi8/php-73
 # RUN chown -R 1001:0 /tmp/src
 
 
-RUN mkdir /tmp/src/drupal
+RUN mkdir -p /tmp/src/drupal
 COPY . /tmp/src/drupal
 RUN mv /tmp/src/drupal/* /tmp/src/drupal/.htaccess /tmp/src/drupal/.csslintrc /tmp/src/drupal/.editorconfig /tmp/src/drupal/.eslintignore /tmp/src/drupal/.eslintrc.json /tmp/src/drupal/.gitattributes /tmp/src/drupal/.ht.router.php /tmp/src
 # Install the dependencies
