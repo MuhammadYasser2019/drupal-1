@@ -10,6 +10,7 @@ COPY . /tmp/src/
 #     /tmp/src/.gitattributes /tmp/src/.ht.router.php /tmp/src
 
 # Install the dependencies
+RUN ls -l /usr/libexec/s2i/
 RUN /usr/libexec/s2i/
 
 ### create /data for sites initial values
