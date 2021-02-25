@@ -6,9 +6,12 @@ RUN mkdir -p /tmp/src/
 COPY . /tmp/src/
 RUN ls -l /tmp/src/
 RUN id 
-RUN /tmp/src2/
+RUN mkdir -p /tmp/src2/
 ADD . /tmp/src2/
 RUN ls -l /tmp/src2/
+USER 0
+RUN chown -R 1001:0 /tmp/src/
+USER 1001
 
 # RUN mv /tmp/src/* /tmp/src/.htaccess \ 
 #     /tmp/src/.csslintrc /tmp/src/.editorconfig \ 
