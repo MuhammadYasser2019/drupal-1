@@ -4,19 +4,11 @@ FROM registry.access.redhat.com/ubi8/php-73
 
 RUN mkdir -p /tmp/src/
 COPY . /tmp/src/
-RUN ls -l /tmp/src/
-RUN id 
-RUN mkdir -p /tmp/src2/
-ADD . /tmp/src2/
-RUN ls -l /tmp/src2/
+
+## fix permissions ##
 USER 0
 RUN chown -R 1001:0 /tmp/src/
 USER 1001
-
-# RUN mv /tmp/src/* /tmp/src/.htaccess \ 
-#     /tmp/src/.csslintrc /tmp/src/.editorconfig \ 
-#     /tmp/src/.eslintignore /tmp/src/.eslintrc.json \
-#     /tmp/src/.gitattributes /tmp/src/.ht.router.php /tmp/src
 
 # Install the dependencies
 RUN /usr/libexec/s2i/assemble
